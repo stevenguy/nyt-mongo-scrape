@@ -3,6 +3,7 @@ var logger = require("morgan");
 var mongoose = require("mongoose");
 var axios = require("axios");
 var cheerio = require("cheerio");
+const path = require('path')
 
 // Require all models
 var db = require("./models");
@@ -27,12 +28,12 @@ app.use(logger("dev"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Make public a static folder
-app.use(express.static("public"));
+app.use(express.static(path.join(__dirname, 'public')))
 
 // // Main route 
-// app.get('/', function (req, res) {
-//       res.render('index')
-// })
+app.get('/', function (req, res) {
+      res.render('index')
+})
 
 app.get('/all', function (req, res) {
     // Find all results from the scrapedData collection in the db
