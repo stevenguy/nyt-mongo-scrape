@@ -82,7 +82,7 @@ $(document).on('click', '.saveButton', function() {
         title: articleTitle,
         summary: articleSummary,
         link: articleLink,
-        notes: articleNotes,
+        note: articleNotes,
         save: "yes"
     }
     console.log(userSave)
@@ -108,7 +108,7 @@ saveArticles.addEventListener('click', function() {
             const saveSummary = $('<p id="savsummary' + index + '">' + data[i].summary + '</p>')
             const saveFooter = $('<div class="uk-card-footer">')
             const saveAction = $('<a id="savlink' + index + '" class="uk-button uk-button-default" href="' + data[i].link + '">Read more</a>')
-            const saveNotes = $('<p id="savnotes' + index + '"> <b>MY NOTES:</b> ' + data[i].notes + '</p>')
+            const saveNotes = $('<p id="savnotes' + index + '"> <b>MY NOTES:</b> ' + data[i].note + '</p>')
             const deleteArticle = $('<a id="adios' + index + '" class="uk-button uk-button-default delete">Delete</a>')
             index ++
             saveFooter.append(saveAction)

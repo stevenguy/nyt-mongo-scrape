@@ -25,8 +25,8 @@ var SaveSchema = new Schema({
     required: false
   },
   note: {
-    type: Schema.Types.ObjectId,
-    ref: "Note"
+    type: String,
+    required: false
   }
 });
 
