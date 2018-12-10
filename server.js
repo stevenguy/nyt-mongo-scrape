@@ -29,10 +29,7 @@ app.use(express.static("public"));
 // // Connect to the Mongo DB
 // mongoose.connect("mongodb://localhost/scraper", { useNewUrlParser: true });
 
-// Main route 
-app.get('/', function (req, res) {
-      res.render('/')
-})
+
 
 app.get('/all', function (req, res) {
     // Find all results from the scrapedData collection in the db
