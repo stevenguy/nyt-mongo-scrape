@@ -30,9 +30,9 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // // Main route 
-app.get('/', function (req, res) {
-      res.render('index')
-})
+// app.get('/', function (req, res) {
+//       res.render('index')
+// })
 
 app.get('/all', function (req, res) {
     // Find all results from the scrapedData collection in the db
