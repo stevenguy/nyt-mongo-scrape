@@ -8,14 +8,14 @@ const path = require('path')
 // Require all models
 var db = require("./models");
 
-var PORT = 3000;
+// var PORT = 3000;
 
-// var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/scraper";
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/scraper";
 
-// mongoose.connect(MONGODB_URI);
+mongoose.connect(MONGODB_URI);
 
 // // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/scraper", { useNewUrlParser: true });
+// mongoose.connect("mongodb://localhost/scraper", { useNewUrlParser: true });
 
 // Initialize Express
 var app = express();
@@ -169,10 +169,10 @@ app.get("/save/:id", function(req, res) {
 });
     
 // Listen on port 3000
-// app.listen(MONGODB_URI, function () {
-//     console.log('App running on port 3000!')
-// })
-
-app.listen(PORT, function () {
+app.listen(MONGODB_URI, function () {
     console.log('App running on port 3000!')
 })
+
+// app.listen(PORT, function () {
+//     console.log('App running on port 3000!')
+// })
